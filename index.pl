@@ -21,7 +21,7 @@ my $dayup = Time::Piece->strptime(int($date - $uptime + tz_local_offset), '%s');
 my $up = Time::Seconds->new(int($uptime));
 my $q = CGI->new;
 
-print $q->header(-type => 'text/html',-refresh => '0'),
+print $q->header(-type => 'text/html',-refresh => '10'),
       $q->start_html(-title => 'up and running'),
       $q->h1('This Pod\'s Uptime'), 
       "uptime: ", $up->pretty,
