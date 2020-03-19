@@ -13,13 +13,12 @@ use Time::HiRes;
 use Time::Zone;
 use CGI qw(:all);
 
-
-my $TZ = 'Europe/Berlin';
+my $TZ     = 'Europe/Berlin';
 my $uptime = Unix::Uptime->uptime_hires();
-my $date = Time::HiRes::time();
-my $dayup = Time::Piece->strptime(int($date - $uptime + tz_local_offset), '%s');
-my $up = Time::Seconds->new(int($uptime));
-my $q = CGI->new;
+my $date   = Time::HiRes::time();
+my $dayup  = Time::Piece->strptime(int($date - $uptime + tz_local_offset), '%s');
+my $up     = Time::Seconds->new(int($uptime));
+my $q      = CGI->new;
 
 print $q->header(-type => 'text/html',-refresh => '10'),
       $q->start_html(-title => 'up and running'),
