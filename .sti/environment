@@ -1,2 +1,2 @@
 ENABLE_CPAN_TEST=true
-CPAN_MIRROR=ftp://cpan.mirror.iphh.net/pub/CPAN/
+CPAN_MIRROR=http://cpan.mirror.iphh.net/
