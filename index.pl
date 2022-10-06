@@ -22,7 +22,7 @@ my $q      = CGI->new;
 
 print $q->header(-type => 'text/html',-refresh => '10'),
       $q->start_html(-title => 'up and running'),
-      $q->h1('This Pod\'s Uptime'), 
+      $q->h1('This Node\'s Uptime'), 
       "uptime: ", $up->pretty,
       $q->br,
       "running since: ", $dayup,
