@@ -1,6 +1,6 @@
 # oc-pod-uptime-test
 
-Perl script used for OpenShift testing
+Perl script used for OpenShift testing - shows uptime of a node
 
 **Setup**
 
