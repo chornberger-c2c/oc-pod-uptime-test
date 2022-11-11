@@ -2,10 +2,22 @@
 
 Perl script used for OpenShift testing - shows uptime of a node
 
-**Setup**
-
+**New Project**
 ```
 oc new-project uptime
+```
+
+**New Build**
+```
 oc new-app https://github.com/chornberger-c2c/oc-pod-uptime-test.git
+```
+
+**Create Route**
+```
 oc expose svc/oc-pod-uptime-test
+```
+**Verify**
+```
+URL=$(oc get route oc-pod-uptime-test -o jsonpath='{.spec.host}''{"\n"}')
+curl ${URL}
 ```
