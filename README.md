@@ -1,6 +1,8 @@
 # oc-pod-uptime-test
 
-Perl script used for OpenShift testing - shows uptime of a node
+Perl script used for OpenShift testing - shows uptime of a node.
+
+The application is build without a Dockerfile via source-to-image (s2i) and made available via a route.
 
 **New Project**
 ```
