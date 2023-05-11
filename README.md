@@ -20,6 +20,6 @@ oc -n uptime expose svc/oc-pod-uptime-test
 ```
 **Verify**
 ```
-URL=$(oc -n uptime get route oc-pod-uptime-test -o jsonpath='{.spec.host}''{"\n"}')
-curl ${URL}
+URL="$(oc -n uptime get route oc-pod-uptime-test -o jsonpath='{.spec.host}''{"\n"}')"
+curl "${URL}"
 ```
