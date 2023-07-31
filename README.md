@@ -2,7 +2,9 @@
 
 Perl script used for OpenShift testing - shows uptime of a node.
 
-The application is build without a Dockerfile via source-to-image (s2i) and made available via a route.
+The application is built - without a Dockerfile - via source-to-image (s2i).
+
+Traffic is coming in via a route object.
 
 **New Project**
 ```
